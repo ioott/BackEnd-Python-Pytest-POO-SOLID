@@ -6,6 +6,7 @@ class SimpleReport:
     @staticmethod
     def generate(prod_data: list[dict]):
         old_fact = min(product["data_de_fabricacao"] for product in prod_data)
+
         exp_dates = min(
             exp_date for product in prod_data
             for exp_date in [product["data_de_validade"]]
